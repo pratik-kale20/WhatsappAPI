@@ -22,7 +22,7 @@ def home():
             "name": "gatepass",
             "languageCode": "en",
             "headerValues": [
-            link
+            "https://" + link
             ],
             "bodyValues": [
             visitorName
