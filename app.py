@@ -10,7 +10,7 @@ url = "https://api.interakt.ai/v1/public/message/"
 def home():
     token = str(request.args['token'])
     mobile = str(request.args['mobile'])
-    # link = str(request.args['link'])
+    link = str(request.args['link'])
     visitorName = str(request.args['name'])
     try: 
         payload = json.dumps({
@@ -22,7 +22,7 @@ def home():
             "name": "gatepass",
             "languageCode": "en",
             "headerValues": [
-            "https://firebasestorage.googleapis.com/v0/b/usmart-vms.appspot.com/o/111114_gatepass.png?alt=media&token=534ebcb9-5bbc-4da2-a3e7-daa333bf570b"
+            link
             ],
             "bodyValues": [
             visitorName
