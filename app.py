@@ -23,7 +23,7 @@ def home():
         'Content-Type': 'application/json'
         }
 
-        response = requests.request("POST", url, headers=headers, data=payload)
+        response = requests.request(url, headers=headers, data=payload)
         return response.text
     except:
         return  "Error Message"
