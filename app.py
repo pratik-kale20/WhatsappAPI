@@ -16,7 +16,7 @@ def home():
         "phoneNumber": mobile,
         "callbackData": "Error message",
         "type": "Text",
-        "Text": "This is a test"
+        "Text": "This is a test",
         })
         headers = {
         'Authorization': 'Basic '+ token,
