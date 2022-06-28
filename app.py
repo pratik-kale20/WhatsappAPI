@@ -16,14 +16,14 @@ def home():
         "phoneNumber": mobile,
         "callbackData": "Error message",
         "type": "Text",
-        "Text": "This is a test",
+        "text": "This is a test",
         })
         headers = {
         'Authorization': 'Basic '+ token,
         'Content-Type': 'application/json'
         }
 
-        response = requests.request("GET", url, headers=headers, data=payload)
+        response = requests.request("POST", url, headers=headers, data=payload)
         return response.text
     except:
         return  "Error Message"
