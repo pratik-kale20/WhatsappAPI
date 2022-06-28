@@ -10,24 +10,13 @@ url = "https://api.interakt.ai/v1/public/message/"
 def home():
     token = str(request.args['token'])
     mobile = str(request.args['mobile'])
-    link = str(request.args['link'])
-    visitorName = str(request.args['name'])
     try: 
         payload = json.dumps({
         "countryCode": "+91",
         "phoneNumber": mobile,
         "callbackData": "Error message",
-        "type": "Template",
-        "template": {
-            "name": "gatepass",
-            "languageCode": "en",
-            "headerValues": [
-            link
-            ],
-            "bodyValues": [
-            visitorName
-            ]
-        }
+        "type": "text",
+        "text": "This is a test"
         })
         headers = {
         'Authorization': 'Basic '+ token,
