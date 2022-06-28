@@ -15,8 +15,8 @@ def home():
         "countryCode": "+91",
         "phoneNumber": mobile,
         "callbackData": "Error message",
-        "type": "text",
-        "text": "This is a test"
+        "type": "Text",
+        "Text": "This is a test"
         })
         headers = {
         'Authorization': 'Basic '+ token,
