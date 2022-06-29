@@ -10,9 +10,9 @@ url = "https://api.interakt.ai/v1/public/message/"
 def home():
     token = str(request.args['token'])
     mobile = str(request.args['mobile'])
-    empName = str(request.arg['emp'])
-    visitorName = str(request.arg['visitor'])
-    purpose = str(request.arg['purpose'])
+    empName = str(request.args['emp'])
+    visitorName = str(request.args['visitor'])
+    purpose = str(request.args['purpose'])
     try: 
         payload = json.dumps({
         "countryCode": "+91",
