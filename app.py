@@ -35,6 +35,6 @@ def home():
         }
 
         response = requests.request("POST", url, headers=headers, data=payload)
-        return response.text
+        return 'working'
     except:
         return  "Error Message"
