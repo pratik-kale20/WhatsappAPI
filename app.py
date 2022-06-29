@@ -10,13 +10,24 @@ url = "https://api.interakt.ai/v1/public/message/"
 def home():
     token = str(request.args['token'])
     mobile = str(request.args['mobile'])
+    empName = str(request.arg['emp'])
+    visitorName = str(request.arg['visitor'])
+    purpose = str(request.arg['purpose'])
     try: 
         payload = json.dumps({
         "countryCode": "+91",
         "phoneNumber": mobile,
         "callbackData": "Error message",
-        "type": "Text",
-        "text": "This is a test",
+        "type": "Template",
+        "template":{
+            "name":"Appointmentapp",
+            "languageCode": "en",
+            "bodyValues": [
+                empName,
+                visitorName,
+                purpose    
+            ]
+        }  
         })
         headers = {
         'Authorization': 'Basic '+ token,
