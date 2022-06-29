@@ -20,7 +20,7 @@ def home():
         "callbackData": "Error message",
         "type": "Template",
         "template":{
-            "name":"Appointmentapp",
+            "name":"appointmentapp",
             "languageCode": "en",
             "bodyValues": [
                 empName,
